@@ -1,3 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .calendar, th, td{
     border: 1px solid black;
+    border-collapse: collapse;
+    width: 40px;
+    width: 500px;
+    text-align: center;
+}
+
+th{
+    background-color: blue;
+    color: white;
 }
