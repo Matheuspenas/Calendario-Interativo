@@ -19,4 +19,18 @@ function colorirDia(){
 
     var elementos = document.querySelectorAll('td');
 
+    // conttador ultilizadas
+
+    var conttadorAzul = 0, conttadorVerde = 0, conttadorRosa = 0, conttador = 0;
+
+    // Loop para verificar estilo de cada celula e contar quantas tem cores e quais
+
+    for(let i = 0; i < elementos.length; i++){
+        // obten=m o estilo aplicado do elemento atual
+        var estilo = window.getComputedStyle(elementos[i]);
+        
+        // obtem a cor de fundo de fundo atual da celula
+
+        var corEstilo = estilo.backgroundColor;
+    }
 }
