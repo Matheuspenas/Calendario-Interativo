@@ -7,7 +7,7 @@ function colorirDia() {
         alert("Favor informe um dia existente no calendário");
     } else {
         if ((days > 0) && (days <= 30)) {
-            let td = calendar.getElementsByTagName('td')[parseInt(days) - 1]; 
+            let td = calendar.getElementsByTagName('td')[parseInt(days) + 1]; 
             td.style.backgroundColor = color;
         } else {
             alert("Favor informar uma data constante no calendário");
