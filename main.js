@@ -1,5 +1,4 @@
 function colorirDia() {
-    // bloco de variáveis
     let days = document.getElementById('day').value;
     let color = document.getElementById('color').value;
     let calendar = document.getElementById('calendar');
@@ -17,33 +16,32 @@ function colorirDia() {
 
     var elementos = document.querySelectorAll('td');
 
-    // contadores utilizados
     var conttadorAzul = 0, conttadorVerde = 0, conttadorRosa = 0, conttadorRoxo = 0;
 
-    // Loop para verificar estilo de cada célula e contar quantas tem cores e quais
     for (let i = 0; i < elementos.length; i++) {
-        // obtenho o estilo aplicado do elemento atual
         var estilo = window.getComputedStyle(elementos[i]);
-        
-        // obtenho a cor de fundo atual da célula
         var corEstilo = estilo.backgroundColor;
 
-        // verifica a cor e incrementa o contador correto
-        if (corEstilo === "rgb(172, 216, 238)" || corEstilo === "lightblue") {
+        // Verificando o valor exato da cor
+        console.log('Cor aplicada no td:', corEstilo);
+
+        // Comparando as cores usando um método mais flexível
+        if (corEstilo === "rgb(172, 216, 238)") { // lightblue
             conttadorAzul++;
         }
-        else if (corEstilo === "rgb(153, 251, 152)" || corEstilo === "palegreen") {
+        else if (corEstilo === "rgb(153, 251, 152)") { // palegreen
             conttadorVerde++;
         }
-        else if (corEstilo === "rgb(255, 182, 193)" || corEstilo === "lightpink") {
+        else if (corEstilo === "rgb(255, 182, 193)") { // lightpink
             conttadorRosa++;
         }
-        else if (corEstilo === "rgb(106, 90, 205)" || corEstilo === "slateblue") {
+        // Adicionando uma verificação mais abrangente para a cor roxa
+        else if (corEstilo.startsWith("rgb(106, 90, 205)")) { // slateblue, com qualquer valor no caso do rgba
             conttadorRoxo++;
         }
     }
 
-    // Exibindo o contador de cores no console para verificar
+    // Exibindo os resultados no console
     console.log("Azul: " + conttadorAzul);
     console.log("Verde: " + conttadorVerde);
     console.log("Rosa: " + conttadorRosa);
